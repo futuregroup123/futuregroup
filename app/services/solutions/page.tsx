@@ -40,7 +40,13 @@ export default function SolutionsPage() {
 
                 {/* Main Feature Image */}
                 <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl bg-gray-100 flex items-center justify-center">
-                    <span className="text-gray-400 font-medium text-xl">Integrated Solutions Diagram/Image</span>
+                    <Image
+                        src="/images/services/s1.png"
+                        alt="Future Group Logistics"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                 </div>
             </section>
 
@@ -53,7 +59,13 @@ export default function SolutionsPage() {
                         <Link href="/services/manufacturing" className="group">
                             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                                 <div className="h-48 bg-gray-200 relative flex items-center justify-center text-gray-400">
-                                    <span className="text-sm">Packaging Image</span>
+                                    <Image
+                                        src="/images/services/logistic5.png"
+                                        alt="Future Group Logistics"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
                                     <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-sm text-[#1e88e5]">
                                         <Layers size={24} />
                                     </div>
@@ -77,7 +89,13 @@ export default function SolutionsPage() {
                         <Link href="/services/warehousing" className="group">
                             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                                 <div className="h-48 bg-gray-200 relative flex items-center justify-center text-gray-400">
-                                    <span className="text-sm">Logistics Flow Image</span>
+                                    <Image
+                                        src="/images/services/w1.png"
+                                        alt="Future Group Logistics"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
                                     <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-sm text-[#1e88e5]">
                                         <Truck size={24} />
                                     </div>
@@ -101,7 +119,13 @@ export default function SolutionsPage() {
                         <Link href="/#about" className="group">
                             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                                 <div className="h-48 bg-gray-200 relative flex items-center justify-center text-gray-400">
-                                    <span className="text-sm">Team Image</span>
+                                    <Image
+                                        src="/images/services/w3.png"
+                                        alt="Future Group Logistics"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
                                     <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-sm text-[#1e88e5]">
                                         <Users size={24} />
                                     </div>

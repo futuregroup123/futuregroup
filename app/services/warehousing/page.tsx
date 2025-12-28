@@ -38,7 +38,13 @@ export default function WarehousingPage() {
                 </div>
 
                 <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-20 bg-gray-100 flex items-center justify-center">
-                    <span className="text-gray-400 font-medium text-xl">Wide Warehouse Interior Image</span>
+                    <Image
+                        src="/images/services/w1.png"
+                        alt="Future Group Logistics"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                 </div>
             </section>
 
@@ -116,13 +122,25 @@ export default function WarehousingPage() {
                         </button>
                     </div>
                     <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
-                        <span className="text-gray-400 font-medium">Warehouse Flex Space Image</span>
+                        <Image
+                            src="/images/services/w2.png"
+                            alt="Future Group Logistics"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-16 items-center md:flex-row-reverse">
                     <div className="order-2 md:order-1 relative h-[350px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
-                        <span className="text-gray-400 font-medium">Value Added Services Image</span>
+                        <Image
+                            src="/images/services/w7.png"
+                            alt="Future Group Logistics"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                     <div className="order-1 md:order-2">
                         <p className="text-[#1e88e5] font-medium mb-2">More Than Storage</p>

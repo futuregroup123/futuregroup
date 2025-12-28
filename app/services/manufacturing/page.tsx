@@ -5,6 +5,13 @@ import Image from 'next/image';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 
 export default function ManufacturingPage() {
+const demos = [
+        { title: 'Operations', image: '/images/careers/8125fd07a2a572afe6f247f446667215b606f053.jpg' }, // Placeholder
+        { title: 'Business Services', image: '/images/careers/32310daf6dab633e91eacb70562f648d3182bc1c.jpg' }, // Placeholder
+        { title: 'Commercial', image: '/images/careers/5075272def28e3c76b796873509637c796adf579.jpg' }, // Placeholder
+        { title: 'Commercial', image: '/images/careers/fd7fe902cfea60176fbbfbb2153c57643532ffd7.png' }, // Placeholder
+    ];
+
     return (
         <main>
             {/* Hero Section */}
@@ -49,7 +56,13 @@ export default function ManufacturingPage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Placeholder Image */}
                         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Production Machinery Image</span>
+                            <Image
+                                src="/images/services/manu1.jpg"
+                                alt="Future Group Logistics"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
                         </div>
                         <div>
                             <p className="text-[#1e88e5] font-medium mb-2">Our Services</p>
@@ -90,7 +103,13 @@ export default function ManufacturingPage() {
                             </button>
                         </div>
                         <div className="order-1 md:order-2 relative h-[400px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Blending Tanks Image</span>
+                            <Image
+                                src="/images/services/manu2.png"
+                                alt="Future Group Logistics"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
                         </div>
                     </div>
                 </section>
@@ -100,7 +119,13 @@ export default function ManufacturingPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-lg bg-white flex items-center justify-center border border-gray-100">
-                                <span className="text-gray-400 font-medium">Lab/QA Image</span>
+                                <Image
+                                    src="/images/services/manu3.png"
+                                    alt="Future Group Logistics"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
                             <div>
                                 <p className="text-[#1e88e5] font-medium mb-2">Our Services</p>
@@ -139,7 +164,13 @@ export default function ManufacturingPage() {
                             </button>
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Packaging Line Image</span>
+                            <Image
+                                src="/images/services/manu4.png"
+                                alt="Future Group Logistics"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
                         </div>
                     </div>
                 </section>
@@ -147,13 +178,23 @@ export default function ManufacturingPage() {
                 {/* Feature Grid / Video Placeholders */}
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[1, 2, 3, 4].map((item) => (
-                            <div key={item} className="relative h-[200px] rounded-xl overflow-hidden bg-[#0a2951] group cursor-pointer">
+                        {demos.map((dept, index) => (
+                            <div key={index} className="relative h-[200px] rounded-xl overflow-hidden bg-[#0a2951] group cursor-pointer">
+                                
+                                <div className="absolute inset-0 bg-gray-800">
+                                    {/* Use existing images as placeholders if available, otherwise graybg */}
+                                    <Image
+                                        src={dept.image}
+                                        alt={dept.title}
+                                        fill
+                                        className="object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+                                    />
+                                </div>
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
                                     <PlayCircle size={48} className="text-white opacity-80 group-hover:scale-110 transition-transform" />
                                 </div>
                                 <div className="absolute bottom-4 left-4 text-white font-medium">
-                                    Capabilities Demo {item}
+                                    Capabilities Demo {dept.title}
                                 </div>
                             </div>
                         ))}
